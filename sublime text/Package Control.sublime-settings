@@ -1,0 +1,31 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"ApplySyntax",
+		"Color Highlighter",
+		"DashDoc",
+		"Dictionaries",
+		"Duplicate Lines",
+		"EditorConfig",
+		"EJS",
+		"Git",
+		"GitGutter",
+		"HTML-CSS-JS Prettify",
+		"Jade",
+		"Monokai Extended",
+		"Package Control",
+		"Package Syncing",
+		"Predawn",
+		"Predawn Monokai",
+		"SublimeCodeIntel",
+		"SublimeLinter",
+		"SublimeLinter-cppcheck",
+		"SublimeLinter-javac",
+		"SublimeLinter-jshint",
+		"SublimeREPL"
+	]
+}
