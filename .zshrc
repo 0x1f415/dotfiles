@@ -9,8 +9,6 @@ source ~/.sensitive
 
 export EDITOR='vim'
 
-# alias jasmin='java -jar ~/jar/jasmin.jar'
-
 source ~/.rvm/scripts/rvm
 zstyle ':completion:*' hosts off
 
