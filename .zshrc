@@ -12,4 +12,6 @@ export EDITOR='vim'
 source ~/.rvm/scripts/rvm
 zstyle ':completion:*' hosts off
 
+alias tree="tree -CFhs --du"
+
 source $ZSH/oh-my-zsh.sh
