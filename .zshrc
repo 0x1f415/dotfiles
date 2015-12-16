@@ -10,8 +10,10 @@ source ~/.sensitive
 export EDITOR='vim'
 
 source ~/.rvm/scripts/rvm
+
+source $ZSH/oh-my-zsh.sh
+
 zstyle ':completion:*' hosts off
 
 alias tree="tree -CFhs --du"
-
-source $ZSH/oh-my-zsh.sh
+alias ls='ls -FG'
