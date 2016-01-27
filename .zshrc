@@ -1,16 +1,14 @@
-export ZSH=~/.oh-my-zsh
+source .profile
+source .env
 
-ZSH_THEME="agnoster"
+setopt hist_ignore_dups hist_expire_dups_first hist_find_no_dups hist_reduce_blanks
+export HISTSIZE=1000000
+export SAVEHIST=1000000
 
+ZSH_THEME="kolo"
 plugins=(git brew bower npm)
 
-# $PATH, and other variables that might contain sensitive information, are kept in separate files
-source ~/.sensitive
-
-export EDITOR='vim'
-
-source ~/.rvm/scripts/rvm
-
+export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 zstyle ':completion:*' hosts off
