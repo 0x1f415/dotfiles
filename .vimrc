@@ -5,3 +5,4 @@ execute pathogen#infect()
 set updatetime =100
 set tabstop=4
 set shiftwidth=4
+set mouse=a

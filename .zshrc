@@ -12,6 +12,9 @@ export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 zstyle ':completion:*' hosts off
+zstyle ':completion:*' ignored-patterns 'todo-indicator|todo.txt'
 
 alias tree="tree -CFhs --du"
 alias ls='ls -FG'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
