@@ -1,0 +1,1 @@
+/home/dogemoji/.config/i3
