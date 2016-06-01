@@ -1,11 +1,33 @@
+# colors
+# see .Xresources
+set $foreground	#f0f0f0
+set $background	#101010
+set $black		#48483e
+set $red		#dc2566
+set $green		#8fc029
+set $yellow		#d4c96e
+set $blue		#55bcce
+set $magenta	#9358fe
+set $cyan		#56b7a5
+set $white		#acada1
+
+# change the notify ost to dunst
+# todo: configure dunst
+exec killall -q notify_os
+exec --no-startup-id dunst
+
+# auto-rename workspaces
+exec_always --no-startup-id python3 ~/src/i3-autoname-workspaces.py/i3-autoname-workspaces.py
+
 gaps inner 10
 gaps outer 0
 smart_gaps on
 
-# autostart in a separate file so it's portable across DEs, and allow for machine-specific configuration that won't be tracked in git
 exec sh ~/autostart.sh
-
 bindsym $mod+Shift+BackSpace exec ~/sh/lock-and-display-off.sh
+
+bindsym $mod+bracketright workspace next
+bindsym $mod+bracketleft workspace prev
 
 set $mod Mod4
 
@@ -14,28 +36,12 @@ new_float normal 1
 hide_edge_borders both
 
 for_window [class="^.*"] border pixel 1
-for_window [class="Corebird"] resize set width 200 px
-
-for_window [class="vlc"] floating on
-
-# hack to get that stupid black window out of the way
-# for_window [class="1Password.exe"] move scratchpad
-# for_window [class="1Password.exe" title="1Password"] focus
-
-# also auto-focus the login prompt
-# for_window [class="Agile1pLogin.exe"] focus
 
 focus_follows_mouse no
 
-bindsym $mod+Tab exec rofi -show window
-
-# bindsym XF86AudioPlay exec mpc toggle
-# bindsym XF86AudioNext exec mpc next
-# bindsym XF86AudioPrev exec mpc prev
-
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 3%+ #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 3%- #decrease sound volume
+# bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 3%+ #increase sound volume
+# bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 3%- #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle # mute sound
 
 font fixed
@@ -48,9 +54,16 @@ bindsym $mod+Return exec --no-startup-id xterm
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-# bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec j4-dmenu-desktop --no-generic --usage-log="/var/j4-dmenu-desktop/usage.log" --dmenu="rofi -dmenu" --term=xterm
+set $dmenuopts -i -l 10 -y 300 -x 660 -h 20 -w 600
+set $j4 j4-dmenu-desktop --no-generic --usage-log="/var/j4-dmenu-desktop/usage.log" --term=xterm
+
+# dmenu and j4-dmenu-desktop
+bindsym $mod+d exec --no-startup-id $j4 --dmenu="dmenu $dmenuopts"
+
+# passmenu
+set $passmenu ~/src/password-store/contrib/dmenu/passmenu
+bindsym $mod+Tab exec --no-startup-id $passmenu $dmenuopts
+bindsym $mod+Shift+Tab exec --no-startup-id $passmenu --type $dmenuopts
 
 # change focus
 bindsym $mod+l focus left
@@ -81,18 +94,9 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
-
-# bindsym --release $mod+s exec scrot '%Y%m%d_%H%M%S.png' -e 'mv $f ~/screenshots/'
-# bindsym --release $mod+Shift+s exec scrot -s '%Y%m%d_%H%M%S.png' -e 'mv $f ~/screenshots/'
-
 bindsym --release $mod+s exec gnome-screenshot -f "screenshots/$(date +%-m-%-d-%Y\ %-I:%M:%S\ %p).png"
 bindsym --release $mod+Shift+s exec gnome-screenshot -a -f "screenshots/$(date +%-m-%-d-%Y\ %-I:%M:%S\ %p).png"
 bindsym --release $mod+Control+s exec gnome-screenshot -w -f "screenshots/$(date +%-m-%-d-%Y\ %-I:%M:%S\ %p).png"
-
-# bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -100,42 +104,35 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
-
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -162,30 +159,29 @@ bar {
 	status_command  ~/sh/status.sh
 	position		top
     colors {
-        background #101010
-        statusline #f8f8f8
+        background $background
+        statusline $foreground
 
-        focused_workspace  #d00075 #d00075 #101010 
-        inactive_workspace #101010 #101010 #f8f8f8
-        urgent_workspace   #f92672 #f92672 #101010 
+        focused_workspace  $red			$red		#000000
+        inactive_workspace $background	$background	#f8f8f8
+        urgent_workspace   $yellow		$yellow		#000000 
     }
+	strip_workspace_numbers yes
 }
 
-client.focused             #d00075	#d00075	#ffffff	#66d9ef
-client.focused_inactive    #101010	#101010	#ffffff	#FFFFFF
-client.unfocused           #333333	#333333	#ffffff	#666666
-client.urgent              #f92672	#f92672	#ffffff	#FF0000
+client.focused             $red 		$red		#ffffff		$blue
+client.focused_inactive    $background	$background	#ffffff		$background
+client.unfocused           $background	$background	#ffffff		#666666
+client.urgent              $yellow		$yellow		#ffffff		#FF0000
 
 set $Locker i3lock && sleep 1
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+set $mode_system system (l) lock, (e) logout, (r) reboot, (s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id $Locker, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+    bindsym s exec --no-startup-id systemctl poweroff -i, mode "default"  
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
