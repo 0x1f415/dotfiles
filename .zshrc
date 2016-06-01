@@ -17,4 +17,9 @@ zstyle ':completion:*' ignored-patterns 'todo-indicator|todo.txt'
 alias tree="tree -CFhs --du"
 alias ls='ls -FG'
 
+export EDITOR=vim
+alias vi=vim
+
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export GPG_TTY=$(tty)
