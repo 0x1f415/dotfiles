@@ -21,7 +21,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'jaxbot/github-issues.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'mhinz/vim-startify'
-if has('win32')
+if has('win32') || has('win32unix')
 	Plugin 'xolox/vim-shell'
 	Plugin 'xolox/vim-misc'
 endif
@@ -39,7 +39,7 @@ let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 let g:gh_issues_query = "state:open user:me sort:created-asc"
 
 let g:startify_list_order = ['sessions', 'bookmarks', 'dir']
-if has('win32')
+if has('win32') || has('win32unix')
 	let g:startify_bookmarks = ['~/dotfiles/.vimrc', '~/dotfiles/.zshrc']
 else
 	let g:startify_bookmarks = ['~/.vimrc', '~/.zshrc']
