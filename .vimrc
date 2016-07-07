@@ -40,7 +40,7 @@ let g:gh_issues_query = "state:open user:me sort:created-asc"
 
 let g:startify_list_order = ['sessions', 'bookmarks', 'dir']
 if has('win32')
-	let g:startify_bookmarks = ['~/dotfiles/vimrc', '~/dotfiles/.zshrc']
+	let g:startify_bookmarks = ['~/dotfiles/.vimrc', '~/dotfiles/.zshrc']
 else
 	let g:startify_bookmarks = ['~/.vimrc', '~/.zshrc']
 endif
