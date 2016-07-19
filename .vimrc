@@ -38,11 +38,17 @@ let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
 
 let g:gh_issues_query = "state:open user:me sort:created-asc"
 
-let g:startify_list_order = ['sessions', 'bookmarks', 'dir']
+let g:ctrlp_working_path_mode = 0
+
+let g:startify_list_order = ['sessions', 'bookmarks']
+if !has('gui_running') && getcwd() != $HOME
+	let g:startify_list_order += ['dir']
+endif
+
 if has('win32') || has('win32unix')
-	let g:startify_bookmarks = ['~/dotfiles/.vimrc', '~/dotfiles/.zshrc']
+	let g:startify_bookmarks = [{'v': '~/dotfiles/.vimrc'}, {'z': '~/dotfiles/.zshrc'}]
 else
-	let g:startify_bookmarks = ['~/.vimrc', '~/.zshrc']
+	let g:startify_bookmarks = [{'v': '~/.vimrc'}, {'z': '~/.zshrc'}]
 endif
 
 au BufNewFile,BufRead *.ejs set filetype=html
@@ -60,4 +66,6 @@ set incsearch
 autocmd filetype crontab setlocal nobackup nowritebackup
 autocmd BufEnter * :syntax sync fromstart
 
-so ~/.vimprivate
+if filereadable(glob("~/.private.vim"))
+    source ~/.private.vim
+endif
