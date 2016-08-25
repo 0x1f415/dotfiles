@@ -77,6 +77,10 @@ set mouse=a
 set incsearch
 autocmd filetype crontab setlocal nobackup nowritebackup
 autocmd BufEnter * :syntax sync fromstart
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 
 if filereadable(glob("~/.private.vim"))
     source ~/.private.vim
