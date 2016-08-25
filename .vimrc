@@ -18,7 +18,9 @@ Plugin 'Shougo/neocomplete'
 Plugin 'scrooloose/syntastic'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'jaxbot/github-issues.vim'
+if has('python')
+	Plugin 'jaxbot/github-issues.vim'
+endif
 Plugin 'tpope/vim-fugitive'
 Plugin 'mhinz/vim-startify'
 if has('win32') || has('win32unix')
