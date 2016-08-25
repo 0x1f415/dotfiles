@@ -22,7 +22,11 @@ if has('python')
 	Plugin 'jaxbot/github-issues.vim'
 endif
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'mhinz/vim-startify'
+Plugin 'godlygeek/tabular'
+Plugin 'jamessan/vim-gnupg'
+Plugin 'vim-airline/vim-airline'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
