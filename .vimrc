@@ -45,6 +45,7 @@ let g:syntastic_check_on_wq = 0
 let g:gh_issues_query = "state:open user:me sort:created-asc"
 
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 let g:startify_list_order = ['sessions', 'bookmarks']
 if !has('gui_running') && getcwd() != $HOME
