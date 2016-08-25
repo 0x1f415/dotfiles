@@ -58,6 +58,11 @@ else
 	let g:startify_bookmarks = [{'v': '~/.vimrc'}, {'z': '~/.zshrc'}]
 endif
 
+let g:airline#extensions#tabline#left_sep = ''
+let g:airline#extensions#tabline#left_alt_sep = ''
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+
 au BufNewFile,BufRead *.ejs set filetype=html
 
 syntax on
