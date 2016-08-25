@@ -1,5 +1,6 @@
 set shellslash
 set nocompatible              " be iMproved, required
+set ffs=unix
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
