@@ -64,7 +64,7 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
 au BufNewFile,BufRead *.ejs set filetype=html
-
+set laststatus=2
 syntax on
 set number
 set splitbelow
