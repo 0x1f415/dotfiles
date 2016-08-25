@@ -6,5 +6,5 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 SetCapsLockState, alwaysoff
 
 #Enter::
-	Run C:\cygwin64\bin\mintty.exe -i /Cygwin-Terminal.ico /bin/zsh --login
+	Run C:\msys64\usr\bin\mintty.exe -i /msys2.ico /bin/zsh --login
 return
