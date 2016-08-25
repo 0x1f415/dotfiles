@@ -23,10 +23,6 @@ if has('python')
 endif
 Plugin 'tpope/vim-fugitive'
 Plugin 'mhinz/vim-startify'
-if has('win32') || has('win32unix')
-	Plugin 'xolox/vim-shell'
-	Plugin 'xolox/vim-misc'
-endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
