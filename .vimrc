@@ -26,6 +26,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'mhinz/vim-startify'
 Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'vim-airline/vim-airline'
 
