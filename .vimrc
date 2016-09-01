@@ -69,6 +69,8 @@ let g:airline_section_z = '%p%%'
 let g:airline#extensions#whitespace#checks = ['indent', 'trailing']
 
 au BufNewFile,BufRead *.ejs set filetype=html
+au BufNewFile,BufReadPost *.md set filetype=markdown
+au BufRead * normal zR
 set laststatus=2
 syntax on
 set number
