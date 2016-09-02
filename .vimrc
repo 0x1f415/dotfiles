@@ -67,6 +67,7 @@ let g:airline_right_sep = ''
 let g:airline_section_y = ''
 let g:airline_section_z = '%p%%'
 let g:airline#extensions#whitespace#checks = ['indent', 'trailing']
+let g:airline#extensions#wordcount#enabled = 0
 
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufReadPost *.md set filetype=markdown
