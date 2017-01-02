@@ -13,6 +13,7 @@ source $ZSH/oh-my-zsh.sh
 
 zstyle ':completion:*' hosts off
 zstyle ':completion:*' ignored-patterns 'todo-indicator|todo.txt'
+compdef gpg2=gpg
 
 alias tree="tree -CFhs --du"
 alias ls='ls -FG'

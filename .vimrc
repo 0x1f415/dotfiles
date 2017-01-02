@@ -27,8 +27,10 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'mhinz/vim-startify'
 Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'vim-airline/vim-airline'
+Plugin 'kkoenig/wimproved.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -69,8 +71,14 @@ let g:airline#extensions#tabline#left_sep = ''
 let g:airline#extensions#tabline#left_alt_sep = ''
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+let g:airline_section_y = ''
+let g:airline_section_z = '%p%%'
+let g:airline#extensions#whitespace#checks = ['indent', 'trailing']
+let g:airline#extensions#wordcount#enabled = 0
 
 au BufNewFile,BufRead *.ejs set filetype=html
+au BufNewFile,BufReadPost *.md set filetype=markdown
+au BufRead * normal zR
 set laststatus=2
 syntax on
 set number
@@ -84,6 +92,7 @@ set mouse=a
 set incsearch
 autocmd filetype crontab setlocal nobackup nowritebackup
 autocmd BufEnter * :syntax sync fromstart
+autocmd GUIEnter * silent! WToggleClean
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
