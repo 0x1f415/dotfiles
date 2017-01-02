@@ -23,6 +23,7 @@ if has('python')
 	Plugin 'jaxbot/github-issues.vim'
 endif
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'mhinz/vim-startify'
 Plugin 'godlygeek/tabular'
@@ -47,6 +48,11 @@ let g:gh_issues_query = "state:open user:me sort:created-asc"
 
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+
+"" Syntastic
+"let g:syntastic_error_symbol = '??'
+"let g:syntastic_style_error_symbol = '??'
+"let g:syntastic_warning_symbol = '??'
 
 let g:startify_list_order = ['sessions', 'bookmarks']
 if !has('gui_running') && getcwd() != $HOME
