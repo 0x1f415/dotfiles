@@ -29,6 +29,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'vim-airline/vim-airline'
+Plugin 'kkoenig/wimproved.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -85,6 +86,7 @@ set mouse=a
 set incsearch
 autocmd filetype crontab setlocal nobackup nowritebackup
 autocmd BufEnter * :syntax sync fromstart
+autocmd GUIEnter * silent! WToggleClean
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
