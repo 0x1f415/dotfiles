@@ -6,7 +6,9 @@ export HISTSIZE=1000000
 export SAVEHIST=1000000
 
 ZSH_THEME="kolo"
-plugins=(git brew bower npm)
+plugins=(git npm)
+extra_plugins=(pacman apt-get apt brew bower)
+for plugin in $extra_plugins; hash $plugin 2>/dev/null && plugins+=( $plugin )
 
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
