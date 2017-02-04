@@ -24,6 +24,7 @@ export EDITOR=vim
 alias vi=vim
 # https://twitter.com/rwjblue/status/536637409547808768
 alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm install && bower install'
+alias gpg=gpg2
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
