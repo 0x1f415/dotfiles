@@ -53,7 +53,9 @@ module.exports = {
 				"attach"  : 'no',
 				"webkit"  : false
 			},
-			'grunt': 'user'
+			'fixes': {
+				'footer': '\n}\n'
+			}
 		}
 	},
 	'userstyles': [
