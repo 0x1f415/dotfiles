@@ -3,6 +3,10 @@
 const font = 'Menlo';
 const fg = '#4183C4' ;
 const theme = 'monokai';
+const bg = '#101010';
+
+const bg_gradient = '-moz-linear-gradient(' + ['to bottom', bg, bg].join(',') + ')';
+
 module.exports = {
 	'git': {
 		'github-dark': {
@@ -28,9 +32,9 @@ module.exports = {
 				'color'   : fg,
 				'visited' : fg,
 				'font'    : font,
-				'image'   : 'none',
+				'image'   : bg_gradient,
 				'tiled'   : false,
-				'attach'  : 'scroll',
+				'attach'  : 'no',
 				'webkit'  : false
 			}
 		},
@@ -40,9 +44,9 @@ module.exports = {
 			'build.json': {
 				"color"   : fg,
 				"visited" :	fg,
-				"image"   : 'none',
+				"image"   : bg_gradient,
 				"tiled"   : false,
-				"attach"  : "scroll",
+				"attach"  : 'no',
 				"webkit"  : false
 			},
 			'grunt': 'user'
