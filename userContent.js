@@ -24,6 +24,10 @@ module.exports = {
 				'webkit'   : false
 			}
 		},
+		'github-tab-color': {
+			'repo': 'https://github.com/StylishThemes/GitHub-Selected-Tab-Color',
+			'entry': 'github-selected-tab-color.css'
+		},
 		'stackexchange-dark': {
 			'repo': 'https://github.com/StylishThemes/StackOverflow-Dark',
 			'entry': 'stackoverflow-dark.css',
