@@ -60,6 +60,7 @@ module.exports = {
 	},
 	'userstyles': [
 		'https://userstyles.org/styles/115066/searx-me-dark',
-		'https://userstyles.org/styles/117673/darktube'
+		'https://userstyles.org/styles/117673/darktube',
+		'https://userstyles.org/styles/97767/dark-twitter-customizable'
 	]
 };
