@@ -9,3 +9,8 @@ SetCapsLockState, alwaysoff
 #Enter::
 	Run C:\msys64\usr\bin\mintty.exe -i /msys2.ico /bin/zsh --login
 return
+
+Capslock & w::Send {Up}
+Capslock & a::Send {Left}
+Capslock & s::Send {Down}
+Capslock & d::Send {Right}
