@@ -56,11 +56,18 @@ module.exports = {
 			'fixes': {
 				'footer': '\n}\n'
 			}
+		},
+		'slack-dark': {
+			'repo': 'https://github.com/laCour/slack-night-mode',
+			'entry': 'css/black.css',
 		}
 	},
 	'userstyles': [
 		'https://userstyles.org/styles/115066/searx-me-dark',
 		'https://userstyles.org/styles/117673/darktube',
-		'https://userstyles.org/styles/97767/dark-twitter-customizable'
+		'https://userstyles.org/styles/97767/dark-twitter-customizable',
+		'https://userstyles.org/styles/123263/dark-rap-genius-old-color-scheme',
+		'https://userstyles.org/styles/120493/dark-night-myanimelist',
+		'https://userstyles.org/styles/133817/darker-userstyles-org'
 	]
 };
