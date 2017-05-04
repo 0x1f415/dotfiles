@@ -3,38 +3,35 @@ set nocompatible              " be iMproved, required
 set ffs=unix
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+set rtp+=~\vimfiles
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'hail2u/vim-css3-syntax'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'othree/html5.vim'
-Plugin 'Shougo/neocomplete'
-Plugin 'scrooloose/syntastic'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'scrooloose/nerdcommenter'
+call plug#begin('~/.vim/plugged')
+Plug 'VundleVim/Vundle.vim'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'othree/html5.vim'
+Plug 'Shougo/neocomplete'
+Plug 'scrooloose/syntastic'
+Plug 'Chiel92/vim-autoformat'
+Plug 'scrooloose/nerdcommenter'
 if has('python')
-	Plugin 'jaxbot/github-issues.vim'
+	Plug 'jaxbot/github-issues.vim'
 endif
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'mhinz/vim-startify'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'jamessan/vim-gnupg'
-Plugin 'vim-airline/vim-airline'
-Plugin 'kkoenig/wimproved.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-unimpaired'
+Plug 'mhinz/vim-startify'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'jamessan/vim-gnupg'
+Plug 'vim-airline/vim-airline'
+Plug 'kkoenig/wimproved.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'Shougo/vimproc.vim'
+Plug 'Quramy/tsuquyomi'
+call plug#end()
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
 let g:ycm_seed_identifiers_with_syntax = 1
 
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute", "trimming empty", "<md-", "discarding unexpected"]
