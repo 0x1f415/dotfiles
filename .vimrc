@@ -98,3 +98,5 @@ nmap <silent> <A-Right> :wincmd l<CR>
 if filereadable(glob("~/.private.vim"))
     source ~/.private.vim
 endif
+
+colorscheme monokai
