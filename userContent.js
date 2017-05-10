@@ -79,6 +79,7 @@ module.exports = {
 		'https://userstyles.org/styles/97767/dark-twitter-customizable',
 		'https://userstyles.org/styles/123263/dark-rap-genius-old-color-scheme',
 		'https://userstyles.org/styles/120493/dark-night-myanimelist',
-		'https://userstyles.org/styles/133817/darker-userstyles-org'
+		'https://userstyles.org/styles/133817/darker-userstyles-org',
+		'https://userstyles.org/styles/124570/tvtropes-dark-2016'
 	]
 };
