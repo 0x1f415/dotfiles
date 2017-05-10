@@ -69,7 +69,7 @@ module.exports = {
 			'repo': 'https://github.com/Nass-O/DarkTube',
 			'entry': 'DarkTube.css',
 			'fixes': {
-				'header': '@-moz-document regexp("https?://apis.google.com/.*/hovercard.*"), regexp("https?://www.youtube.(com|([a-z]{2}))(.[a-z]{2})?/((\\?|channel|results|feed|playlist|feature|watch|user|hovercard|upload|my_videos|view_all_playlists|subscription_manager|dashboard|subscribers|c|#|messages|analytics|index).*)"), regexp("https?://www.youtube.(com|([a-z]{2}))(.[a-z]{2})?."), regexp("https?://apis.google.com/u/b/.*") {\n\n',
+				'header': '@-moz-document regexp("https?://apis.google.com/.*/hovercard.*"), regexp("https?://www.youtube.(com|([a-z]{2}))(.[a-z]{2})?/((\\\\?|channel|results|feed|playlist|feature|watch|user|hovercard|upload|my_videos|view_all_playlists|subscription_manager|dashboard|subscribers|c|#|messages|analytics|index).*)"), regexp("https?://www.youtube.(com|([a-z]{2}))(.[a-z]{2})?."), regexp("https?://apis.google.com/u/b/.*") {\n\n',
 				'footer': '\n}\n'
 			}
 		}
