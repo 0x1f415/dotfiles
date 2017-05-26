@@ -58,12 +58,8 @@ module.exports = {
 			}
 		},
 		'slack-dark': {
-			'repo': 'https://github.com/laCour/slack-night-mode',
-			'entry': 'css/black.css',
-		},
-		'google-dark': {
-			'repo': 'https://github.com/Nass-O/DarkSearch',
-			'entry': 'DarkSearch.css'
+			repo: 'https://github.com/laCour/slack-night-mode',
+			entry: 'css/black.css',
 		},
 		'youtube-dark': {
 			'repo': 'https://github.com/Nass-O/DarkTube',
@@ -72,14 +68,20 @@ module.exports = {
 				'header': '@-moz-document regexp("https?://apis.google.com/.*/hovercard.*"), regexp("https?://www.youtube.(com|([a-z]{2}))(.[a-z]{2})?/((\\\\?|channel|results|feed|playlist|feature|watch|user|hovercard|upload|my_videos|view_all_playlists|subscription_manager|dashboard|subscribers|c|#|messages|analytics|index).*)"), regexp("https?://www.youtube.(com|([a-z]{2}))(.[a-z]{2})?."), regexp("https?://apis.google.com/u/b/.*") {\n\n',
 				'footer': '\n}\n'
 			}
+		},
+		'google-dark': {
+			repo: 'https://github.com/Nass-O/DarkSearch',
+			entry: 'DarkSearch.css'
 		}
 	},
 	'userstyles': [
 		'https://userstyles.org/styles/115066/searx-me-dark',
-		'https://userstyles.org/styles/97767/dark-twitter-customizable',
-		'https://userstyles.org/styles/123263/dark-rap-genius-old-color-scheme',
 		'https://userstyles.org/styles/120493/dark-night-myanimelist',
+		'https://userstyles.org/styles/123263/dark-rap-genius-old-color-scheme',
+		'https://userstyles.org/styles/124570/tvtropes-dark-2016',
 		'https://userstyles.org/styles/133817/darker-userstyles-org',
-		'https://userstyles.org/styles/124570/tvtropes-dark-2016'
+		'https://userstyles.org/styles/139379/hacker-news-dark-scannable',
+		'https://userstyles.org/styles/140861/exalted-toss-arc',
+		'https://userstyles.org/styles/97767/dark-twitter-customizable'
 	]
 };
