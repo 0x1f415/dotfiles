@@ -82,6 +82,7 @@ module.exports = {
 		'https://userstyles.org/styles/133817/darker-userstyles-org',
 		'https://userstyles.org/styles/139379/hacker-news-dark-scannable',
 		'https://userstyles.org/styles/140861/exalted-toss-arc',
-		'https://userstyles.org/styles/97767/dark-twitter-customizable'
+		'https://userstyles.org/styles/97767/dark-twitter-customizable',
+		'https://userstyles.org/styles/142824/mdn-marc-s-dark-theme'
 	]
 };
