@@ -1,43 +1,4 @@
-URxvt.scrollBar: false
-URxvt.font:      xft:Terminus, xft:Symbola
-
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.matcher.button: 1
-URxvt.matcher.rend.0: Uline Bold fg5
-URxvt*scrollTtyOutput:      false
-URxvt*scrollWithBuffer:     true
-URxvt*scrollTtyKeypress:    true
-
-! URxvt.keysym.Control-l: command:\033c
-
-XTerm*metaSendsEscape: true
-XTerm*borderWidth:0
-XTerm*ColorMode.boldColors: false
-XTerm.fullscreen: never
-
-! terminal.sexy
-
-! special
-
-#define $fg	#f0f0f0
-#define $bg	#101010
-#define $color0 #48483e
-#define $color1 #dc2566
-#define $color2 #8fc029
-#define $color3 #d4c96e
-#define $color4 #55bcce
-#define $color5 #9358fe
-#define $color6 #56b7a5
-#define $color7 #acada1
-#define $color8 #76715e
-#define $color9 #fa2772
-#define $color10 #a7e22e
-#define $color11 #e7db75
-#define $color12 #66d9ee
-#define $color13 #ae82ff
-#define $color14 #66efd5
-#define $color15 #cfd0c2
+#include ".Xcolors"
 
 *.foreground: $fg
 *.background: $bg
@@ -59,7 +20,26 @@ XTerm.fullscreen: never
 *.color14: $color14
 *.color15: $color15
 
+URxvt.scrollBar: false
+URxvt.font:      xft:Terminus, xft:Symbola
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
+URxvt.matcher.rend.0: Uline Bold fg5
+URxvt*scrollTtyOutput:      false
+URxvt*scrollWithBuffer:     true
+URxvt*scrollTtyKeypress:    true
+
+! URxvt.keysym.Control-l: command:\033c
+
+XTerm*metaSendsEscape: true
+XTerm*borderWidth:0
+XTerm*ColorMode.boldColors: false
+XTerm.fullscreen: never
+
 rofi.color-enabled: true
+
 ! State:          	´bg´,	´fg´,	´bgalt´,´hlbg´,´hlfg´
 rofi.color-normal:	$bg,	$fg,	#222222,$color4,$bg
 rofi.color-urgent:	#fdf6e3,#dc322f,#eee8d5,#dc322f,#fdf6e3
