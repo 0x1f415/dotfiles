@@ -38,6 +38,8 @@ XTerm*borderWidth:0
 XTerm*ColorMode.boldColors: false
 XTerm.fullscreen: never
 
+rofi.font: monospace 12
+
 rofi.color-enabled: true
 
 ! State:          	´bg´,	´fg´,	´bgalt´,´hlbg´,´hlfg´
