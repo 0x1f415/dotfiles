@@ -72,7 +72,7 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --no-generic --display-binary --usage-log="/var/j4-dmenu-desktop/usage.log" --dmenu="rofi -dmenu -i -p ''"
+bindsym $mod+d exec rofi -show drun -show-icons
 bindsym $mod+Shift+s exec --no-startup-id gnome-screenshot -a
 
 # change focus
